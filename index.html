@@ -25,18 +25,16 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
-
+    <!-- SLICK SLIDER -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"
-      integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
   </head>
   <body>
     <nav
-      class="navbar align-items-center d-flex p-2 bg-white justify-content-between position-sticky top-0"
+      class="navbar align-items-center d-flex p-2 bg-white justify-content-between position-fixed top-0"
     >
       <!-- start -->
       <div class="nav__start py-1 d-flex">
@@ -92,7 +90,7 @@
           title="Home"
           class="d-flex px-3 py-2 align-items-center menu__link active"
         >
-          <i class="home__icon menu__icon fs-4 bx bxs-home"></i>
+          <img class="home__icon menu__icon" src="./assets/home.png" alt="" />
           <p class="m-0">Home</p></a
         >
         <a
@@ -120,7 +118,7 @@
           <p class="m-0">Subscriptions</p></a
         >
       </div>
-      <div class="border border-1 my-1"></div>
+      <div class="line border border-1 my-1"></div>
       <!--  -->
       <div class="p-2">
         <a
@@ -128,7 +126,11 @@
           title="Liblary"
           class="d-flex px-3 py-2 align-items-center menu__link"
         >
-          <i class="library__icon menu__icon fs-4 bx bxs-videos"></i>
+          <img
+            class="liblary__icon menu__icon"
+            src="./assets/liblary.png"
+            alt=""
+          />
           <p class="m-0">Liblary</p></a
         >
         <a
@@ -145,7 +147,7 @@
         >
       </div>
       <!--  -->
-      <div class="border border-1 my-1"></div>
+      <div class="line border border-1 my-1"></div>
       <!--  -->
       <div class="p-2 px-3 justify-content-center align-items-center">
         <p class="px-1 fs-7">Sign in to like videos, comment, and subscribe.</p>
@@ -189,7 +191,7 @@
           title="News"
           class="d-flex px-3 py-2 align-items-center menu__link"
         >
-          <img class="news__icon" src="/assets/subscribe.png" alt="" />
+          <img class="news__icon" src="/assets/news.jpg" alt="" />
           <p class="m-0">News</p></a
         >
         <a
@@ -202,7 +204,7 @@
         >
       </div>
       <!--  -->
-      <div class="border border-1 my-1"></div>
+      <div class="line border border-1 my-1"></div>
       <!--  -->
       <div class="p-2">
         <a
@@ -215,7 +217,7 @@
         >
       </div>
       <!--  -->
-      <div class="border border-1 my-1"></div>
+      <div class="line border border-1 my-1"></div>
       <!--  -->
       <div class="p-2">
         <p class="px-3">More from YouTube</p>
@@ -245,7 +247,7 @@
         >
       </div>
       <!--  -->
-      <div class="border border-1 my-1"></div>
+      <div class="line border border-1 my-1"></div>
       <!--  -->
       <div class="p-2">
         <a
@@ -282,7 +284,7 @@
         >
       </div>
       <!--  -->
-      <div class="border border-1 my-1"></div>
+      <div class="line border border-1 my-1"></div>
       <!--  -->
       <div class="footer gray px-4">
         <a class="fs-8" href="#about.html">About</a>
@@ -302,442 +304,452 @@
       </div>
     </div>
     <!-- main -->
-    <div class="containers menu__type">
-      <ul class="type d-flex p-2 position-sticky">
-        <li><a href="#">All</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Lo-fi</a></li>
-        <li><a href="#">Love songs</a></li>
-        <li><a href="#">Live</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Youth music</a></li>
-        <li><a href="#">Vietnamese diasporic music</a></li>
-        <li><a href="#">Sports</a></li>
-        <li><a href="#">Gaming</a></li>
-        <li><a href="#">Music</a></li>
-        <li><a href="#">Lo-fi</a></li>
-      </ul>
-    </div>
-    <div class="containers pt-2 pe-2">
-      <div class="container">
-        <div class="row row-cols-4">
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+    <div class="containers">
+      <div class="menu__type">
+        <ul id="type" class="type d-flex p-2 position-fixed">
+          <li id="all"><a href="#">All</a></li>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">Lo-fi</a></li>
+          <li><a href="#">Love songs</a></li>
+          <li><a href="#">Live</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Youth music</a></li>
+          <li><a href="#">Sports</a></li>
+          <li><a href="#">Gaming</a></li>
+          <li><a href="#">Music</a></li>
+          <li><a href="#">Lo-fi</a></li>
+        </ul>
+      </div>
+      <div class="video__main pt-2 pe-2">
+        <div class="container">
+          <div class="row row-cols-4">
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
             </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
-            </div>
-          </div>
-          <div id="col" class="col">
-            <img class="video" src="/assets/video01.jpg" alt="" />
-            <p class="time">1:03:22</p>
-            <div class="title">
-              <img class="author__img" src="/assets/video01.jpg" alt="" />
+            <div id="col" class="col">
+              <img class="video" src="/assets/video01.jpg" alt="" />
+              <p class="time">1:03:22</p>
+              <div class="title">
+                <img class="author__img" src="/assets/video01.jpg" alt="" />
 
-              <div class="video__desc">
-                <a class="subject fs-7" href="" class="title"
-                  >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
-                  Alec Benjamin … (Mix)</a
-                >
-                <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
-                <p class="text-secondary view fs-8 p-0">
-                  52N views • 18 hours ago
+                <div class="video__desc">
+                  <a class="subject fs-7" href="" class="title"
+                    >Ed Sheeran - Perfect (Lyrics) | John Legend, Lewis Capaldi,
+                    Alec Benjamin … (Mix)</a
+                  >
+                  <p class="author__name text-secondary lh-1 fs-8">Unicina</p>
+                  <p class="text-secondary view fs-8 p-0">
+                    52N views • 18 hours ago
+                  </p>
+                </div>
+                <i
+                  class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
+                ></i>
+              </div>
+              <div class="text__overlay">
+                <p class="text watch__later">
+                  <img class="clock__icon" src="assets/clock.png" alt="" />Watch
+                  Later
+                </p>
+                <p class="text addToList">
+                  <img
+                    class="addList__icon"
+                    src="/assets/addList.png"
+                    alt=""
+                  />Add To Queue
                 </p>
               </div>
-              <i
-                class="fa-solid fa-ellipsis-vertical me-2 setting__icon fs-6 align-items-center"
-              ></i>
-            </div>
-            <div class="text__overlay">
-              <p class="text watch__later">
-                <img class="clock__icon" src="assets/clock.png" alt="" />Watch
-                Later
-              </p>
-              <p class="text addToList">
-                <img
-                  class="addList__icon"
-                  src="/assets/addList.png"
-                  alt=""
-                />Add To Queue
-              </p>
             </div>
           </div>
         </div>
       </div>
     </div>
+
     <!-- slick -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-1.11.0.min.js"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
+    <!-- Main Js -->
     <script src="/index.js"></script>
   </body>
 </html>
