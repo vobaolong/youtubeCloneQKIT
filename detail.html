@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube</title>
+    <link rel="icon" type="image/x-icon" href="/assets/logo1.ico" />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- ONLY ICON -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- CSS BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar align-items-center d-flex p-2 bg-white justify-content-between position-fixed top-0"
+    >
+      <!-- start -->
+      <div class="nav__start py-1 d-flex">
+        <i
+          class="menu__btn fa-solid fa-bars m-0 px-2 fs-5 p-2 ms-2 rounded-circle"
+        ></i>
+        <a class="text-decoration-none ps-3 pe-1" href="index.html">
+          <img
+            class="ms-2"
+            width="90"
+            src="./assets/logo.png"
+            alt="YouTube Home"
+          />
+        </a>
+        <span class="fs-06">VN</span>
+      </div>
+      <!-- center -->
+      <div class="d-flex">
+        <div class="search__box d-flex border border-1 rounded-pill">
+          <input
+            id="input__search"
+            class="input__search border-0 rounded-circle px-3 w-100"
+            type="text"
+            placeholder="Search"
+          />
+          <i
+            class="search__btn border-start border-1 p-2 px-3 fs-4 bx bx-search bg-light"
+            title="Search"
+          ></i>
+        </div>
+        <i
+          class="micro__btn bx bxs-microphone fs-5 p-2 ms-2 rounded-circle"
+          title="Search with your voice"
+        ></i>
+      </div>
+      <!-- end -->
+      <div class="nav__end p-1 d-flex">
+        <i
+          title="Settings"
+          class="fa-solid fa-ellipsis-vertical me-4 p-2 fs-6 d-flex align-items-center"
+        ></i>
+        <div class="user__btn p-05 border border-1 rounded-pill d-flex">
+          <i class="bx bx-user-circle fs-3 p-05 text-blue fw-light"></i>
+          <p class="m-0 p-05 pe-2 fs-6 text-blue">Sign in</p>
+        </div>
+      </div>
+    </nav>
+    <!-- sidebar -->
+    <div class="sidebar sidebar__hide small__sidebar position-fixed pe-1">
+      <div class="p-2">
+        <a
+          href="#"
+          title="Home"
+          class="d-flex px-3 py-2 align-items-center menu__link active"
+        >
+          <img class="home__icon menu__icon" src="./assets/home.png" alt="" />
+          <p class="m-0">Home</p></a
+        >
+        <a
+          href="#"
+          title="Shorts"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img
+            class="shorst__icon menu__icon"
+            src="./assets/shorst.png"
+            alt=""
+          />
+          <p class="m-0">Shorts</p></a
+        >
+        <a
+          href="#"
+          title="Subscriptions"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img
+            class="subscript__icon menu__icon"
+            src="/assets/subscribe.png"
+            alt=""
+          />
+          <p class="m-0">Subscriptions</p></a
+        >
+      </div>
+      <div class="line border border-1 my-1"></div>
+      <!--  -->
+      <div class="p-2">
+        <a
+          href="#"
+          title="Liblary"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img
+            class="liblary__icon menu__icon"
+            src="./assets/liblary.png"
+            alt=""
+          />
+          <p class="m-0">Liblary</p></a
+        >
+        <a
+          href="#"
+          title="History"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img
+            class="history__icon menu__icon"
+            src="./assets/history.png"
+            alt=""
+          />
+          <p class="m-0">History</p></a
+        >
+      </div>
+      <!--  -->
+      <div class="line border border-1 my-1"></div>
+      <!--  -->
+      <div class="p-2 px-3 justify-content-center align-items-center">
+        <p class="px-1 fs-7">Sign in to like videos, comment, and subscribe.</p>
+        <div
+          class="user__btn p-05 border border-1 align-items-center justify-content-center w-40 rounded-pill d-flex m-0 text-center"
+        >
+          <i class="bx bx-user-circle fs-3 p-05 text-blue fw-light"></i>
+          <p class="m-0 p-05 pe-2 fs-6 text-blue">Sign in</p>
+        </div>
+      </div>
+      <div class="border border-1 my-2"></div>
+      <!--  -->
+      <div class="p-2">
+        <p class="px-3">Explore</p>
+        <a
+          href="#"
+          title="Trending"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="trending__icon" src="/assets/trend.png" alt="" />
+          <p class="m-0">Trending</p></a
+        >
+        <a
+          href="#"
+          title="Music"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="music__icon" src="/assets/musico.png" alt="" />
+          <p class="m-0">Music</p></a
+        >
+        <a
+          href="#"
+          title="Gaming"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="gaming__icon fs-4" src="/assets/gaming.png" alt="" />
+          <p class="m-0">Gaming</p></a
+        >
+        <a
+          href="#"
+          title="News"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="news__icon" src="/assets/news.jpg" alt="" />
+          <p class="m-0">News</p></a
+        >
+        <a
+          href="#"
+          title="Sport"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="cup__icon" src="/assets/cup.png" alt="" />
+          <p class="m-0">Sport</p></a
+        >
+      </div>
+      <!--  -->
+      <div class="line border border-1 my-1"></div>
+      <!--  -->
+      <div class="p-2">
+        <a
+          href="#"
+          title="Browse channels"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="add__icon my-0" src="/assets/add.png" alt="" />
+          <p class="m-0">Browse channels</p></a
+        >
+      </div>
+      <!--  -->
+      <div class="line border border-1 my-1"></div>
+      <!--  -->
+      <div class="p-2">
+        <p class="px-3">More from YouTube</p>
+        <a
+          href="#"
+          title="YouTube Music"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="music__icon my-0" src="/assets/ytbMusic.png" alt="" />
+          <p class="m-0">YouTube Music</p></a
+        >
+        <a
+          href="#"
+          title="YouTube Kids"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="kid__icon my-0" src="/assets/kid.png" alt="" />
+          <p class="m-0">YouTube Kids</p></a
+        >
+        <a
+          href="#"
+          title="YouTube TV"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="tv__icon my-0" src="/assets/TV.png" alt="" />
+          <p class="m-0">YouTube TV</p></a
+        >
+      </div>
+      <!--  -->
+      <div class="line border border-1 my-1"></div>
+      <!--  -->
+      <div class="p-2">
+        <a
+          href="#"
+          title="Settings"
+          class="align-items-center d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="setting__icon my-0" src="/assets/setting.png" alt="" />
+          <p class="m-0">Settings</p></a
+        >
+        <a
+          href="#"
+          title="Report history"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="report__icon my-0" src="/assets/flag.png" alt="" />
+          <p class="m-0">Report history</p></a
+        >
+        <a
+          href="#"
+          title="Help"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="help__icon my-0" src="/assets/help.png" alt="" />
+          <p class="m-0">Help</p></a
+        >
+        <a
+          href="#"
+          title="Send feedback"
+          class="d-flex px-3 py-2 align-items-center menu__link"
+        >
+          <img class="feedback__icon my-0" src="/assets/feedback.png" alt="" />
+          <p class="m-0">Send feedback</p></a
+        >
+      </div>
+      <!--  -->
+      <div class="line border border-1 my-1"></div>
+      <!--  -->
+      <div class="footer gray px-4">
+        <a class="fs-8" href="#about.html">About</a>
+        <a class="fs-8" href="#press.html">Press</a>
+        <a class="fs-8" href="#copyright.html">Copyright</a><br />
+        <a class="fs-8" href="#contactus.html">Contact us</a>
+        <a class="fs-8" href="#creators.html">Creators</a><br />
+        <a class="fs-8" href="#advertise.html">Advertise</a>
+        <a class="fs-8" href="#developers.html">Developers</a>
+        <p></p>
+        <a class="fs-8" href="#copyright.html">Terms</a>
+        <a class="fs-8" href="#contactus.html">Privacy</a>
+        <a class="fs-8" href="#creators.html">Policy & Safery</a>
+        <a class="fs-8" href="#work.html">How YouTube works</a><br />
+        <a class="fs-8" href="#test.html">Test new features</a>
+        <p class="fs-8 mt-2 text-secondary">&copy; 2023 Google LLC</p>
+      </div>
+    </div>
+    <div class="container play__container">
+      <div
+        class="row d-flex flex-lg-row flex-md-column justify-content-between flex-wrap"
+      >
+        <div class="play__video col-lg-8 col-md">
+          <iframe
+            src="https://www.youtube.com/embed/m25CtNObi7Y"
+            frameborder="1"
+            scrolling="yes"
+            onload="resizeIframe(this)"
+          ></iframe>
+          <h5 class="title mt-1">
+            Enjoy Your Day 🍀 Lofi hip hop mix ~ Stress Relief, Relaxing Music
+            🍀 Corgi Chilling
+          </h5>
+          <div class="content justify-content-between d-flex">
+            <div class="content__left d-flex">
+              <img class="rounded-circle w-45" src="./assets/avt.jpg" alt="" />
+              <div class="ms-2">
+                <p class="name m-0 fw-bold">Corgi Chilling</p>
+                <p class="subscriber m-0 fs-8">2.76K subscribers</p>
+              </div>
+              <div
+                class="subscribe__btn bg-black text-white align-items-center justify-content-center d-flex rounded-pill px-3 py-2 ms-4 my-1 fs-7"
+              >
+                Subscribe
+              </div>
+            </div>
+            <div class="content__right d-flex gap-2">
+              <!-- like btn -->
+              <div
+                class="d-flex justify-content-center align-items-center like"
+              >
+                <!-- like -->
+                <div class="like__btn d-flex m-0 align-items-center p-2">
+                  <img src="assets/like.jpg" alt="" class="like__icon m-0" />
+                  <p class="mx-2 m-0">6,5K</p>
+                </div>
+                <!-- line -->
+                <span class="line border h-75"></span>
+                <!-- dislike -->
+                <div class="dislike__btn m-0 align-items-center p-2">
+                  <img
+                    src="/assets/dislike.jpg"
+                    alt=""
+                    class="dislike__icon m-0"
+                  />
+                </div>
+              </div>
+              <!-- share btn -->
+              <div
+                class="share__btn d-flex justify-content-center align-items-center text-center"
+              >
+                <img
+                  class="share__icon m-0 ms-2"
+                  src="/assets/share.png"
+                  alt=""
+                />
+                <p class="mx-2 m-0">Share</p>
+              </div>
+              <div
+                class="save__btn d-flex justify-content-center align-items-center text-center"
+              >
+                <img
+                  class="save__icon m-0 ms-2"
+                  src="/assets/save.png"
+                  alt=""
+                />
+                <p class="mx-2 m-0">Save</p>
+              </div>
+              <div class="more__btn m-0 p-2">
+                <img
+                  class="justify-content-center align-items-center text-center more__icon m-0"
+                  src="/assets/dot.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+          <!-- review -->
+          <div class="review mt-3 p-2 px-3 lh-1">
+            <span class="d-flex">
+              <p class="text-black fw-bold fs-7">
+                375.209 views 21 thg 1, 2023
+              </p>
+              <p class="ms-3 text-blue">#Corgi_Chilling #Melosy #Lofi</p>
+            </span>
+            <p>
+              Enjoy Your Day 🍀 Lofi hip hop mix ~ Stress Relief, Relaxing Music
+              🍀 Corgi Chilling
+            </p>
+            <span class="d-flex">
+              <p>
+                🌞 Help us reach 1,000 Subscribers:
+                https://www.youtube.com/@CorgiChilling...
+              </p>
+              <p class="show__more ms-2 text-black fw-bold">Show more</p>
+            </span>
+          </div>
+          <!-- comment -->
+          <div class="comment d-flex mt-4">
+            <p class="count__cmt me-4">229 Comments</p>
+            <div class="sort d-flex" title="Sort comment">
+              <img class="sort__icon" src="/assets/sort.png" alt="" />
+              <p>Sort by</p>
+            </div>
+          </div>
+
+          <div
+            class="write__cmt d-flex justify-content-center align-items-center"
+          >
+            <img
+              src="assets/user.jpg"
+              class="rounded-circle user me-3"
+              alt=""
+            />
+            <p class="text pt-1">Add a comment...</p>
+          </div>
+          <!-- comments -->
+          <div class="list__comment d-flex mt-3">
+            <div>
+              <img
+                class="user rounded-circle me-3"
+                src="assets/user.jpg"
+                alt=""
+              />
+            </div>
+            <div class="comment me-5">
+              <p class="d-flex fs-8 m-0">
+                <strong class="pe-1">Trang Thiều</strong> 1 day ago
+              </p>
+              <p class="p-0 m-0 fs-7 fw-normal">
+                Just imagine you're in a cosy café it's raining outside and you
+                are drinking a good cup of coffee/tea... Just imagine.☕☕☕
+              </p>
+              <div class="reply d-flex py-2 align-items-center">
+                <img
+                  class="like__icon me-2 p-0"
+                  src="/assets/like.jpg"
+                  alt=""
+                />
+                2
+                <img
+                  class="dislike__icon mx-2"
+                  src="/assets/dislike.jpg"
+                  alt=""
+                />
+                <p class="fs-8 rep rounded-pill p-2 px-3 m-0">Reply</p>
+              </div>
+            </div>
+          </div>
+          <!-- comments -->
+          <div class="list__comment d-flex mt-3">
+            <div>
+              <img
+                class="user rounded-circle me-3"
+                src="assets/user.jpg"
+                alt=""
+              />
+            </div>
+            <div class="comment me-5">
+              <p class="d-flex fs-8 m-0">
+                <strong class="pe-1">Bảo Long</strong> 4 day ago
+              </p>
+              <p class="p-0 m-0 fs-7 fw-normal">
+                Cảm giác nghe như thuở ban đầu, đã 4 năm kể từ khi bước vào đại
+                học tôi vẫn tìm lại được cảm xúc ngày ấy. cảm xúc cùng bạn bè
+                rong ruổi ngoài net. Cảm ơn Ying.
+              </p>
+              <div class="reply d-flex py-2 align-items-center">
+                <img
+                  class="like__icon me-2 p-0"
+                  src="/assets/like.jpg"
+                  alt=""
+                />
+                281
+                <img
+                  class="dislike__icon mx-2"
+                  src="/assets/dislike.jpg"
+                  alt=""
+                />
+                <p class="fs-8 rep rounded-pill p-2 px-3 m-0">Reply</p>
+              </div>
+            </div>
+          </div>
+          <!-- comments -->
+          <div class="list__comment d-flex mt-3">
+            <div>
+              <img
+                class="user rounded-circle me-3"
+                src="assets/user.jpg"
+                alt=""
+              />
+            </div>
+            <div class="comment me-5">
+              <p class="d-flex fs-8 m-0">
+                <strong class="pe-1">Dead Entertainment</strong>
+              </p>
+              <p class="p-0 m-0 fs-7 fw-normal">
+                Nhớ cấp 2 đi học ở nội trú nghe mãi không chán ❤️🤗 cứ có thời
+                gian rảnh cả lớp hú nhau mở nhạc edm nghe hay thật nhớ qué thời
+                cấp 2 đầy ắp tiếng cười mỗi lần nghe là mỗi lần ôn lại kỉ niệm
+                nhớ bạn bè và còn cả những người thầy người cô nay 2022 ai trở
+                lại kỉ niệm xin một cánh tay nhé🖐️ thanks ad❤
+              </p>
+              <div class="reply d-flex py-2 align-items-center">
+                <img
+                  class="like__icon me-2 p-0"
+                  src="/assets/like.jpg"
+                  alt=""
+                />
+                1.3k
+                <img
+                  class="dislike__icon mx-2"
+                  src="/assets/dislike.jpg"
+                  alt=""
+                />
+                <p class="fs-8 rep rounded-pill p-2 px-3 m-0">Reply</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right -->
+        <div class="right__sidebar col-lg-4">
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <div class="position-relative">
+                <img
+                  class="video__img"
+                  src="./assets/maxresdefault.jpg"
+                  alt=""
+                />
+                <p class="time_small">1:03:22</p>
+              </div>
+            </div>
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Nhạc Lofi 8x9x - Nhạc Xưa Chill Nhẹ Nhàng - Top Nhạc Trẻ Xưa
+                Hot TikTok ♫ Nhạc Chill Hot TikTok 2022</a
+              >
+              <p class="fs-8 p-0 m-0">Tiệm Nhạc Xưa</p>
+              <p class="fs-8 p-0 m-0">1,2 M views • 1 housr ago</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/video1.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Đen - Luôn yêu đời ft. Cheng (M/V)</a
+              >
+              <p class="fs-8 p-0 m-0">Đen Vâu Official</p>
+              <p class="fs-8 p-0 m-0">4,9 M views • 9 ngày trước</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/video2.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Cảm Phục Tinh Thần Vượt Khó, Chạy Đua Với Thời Gian Cứu Nạn
+                Nhân Của Các Chiến Sĩ Cứu Hộ VN | SKĐS</a
+              >
+              <p class="fs-8 p-0 m-0">Báo Sức khoẻ & Đời sống</p>
+              <p class="fs-8 p-0 m-0">164 N views • 1 ngày trước</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/4.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Ghé Vào Tai (UMIE x Freaky x Hổ) - Những Bản Nhạc Lofi Chill
+                Khó Quên - Nhạc Chill TikTok 2023</a
+              >
+              <p class="fs-8 p-0 m-0">Đậm Sound</p>
+              <p class="fs-8 p-0 m-0">100 N views • 5 ngày trước</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/maxresdefault.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Nhạc EDM Nhiều Cảm Xúc Cho Ngày Dài Mỏi Mệt ♫ Top 20 Bản Nhạc
+                EDM Gây Nghiện Hay Nhất 2023</a
+              >
+              <p class="fs-8 p-0 m-0">Cloud EDM</p>
+              <p class="fs-8 p-0 m-0">1,1 K views • 15 hours ago</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/6.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Top 15 Bản Nhạc EDM Nghe Hoài Không Chán | Nhạc Điện Tử Gây
+                Nghiện Hay Nhất | YING</a
+              >
+              <p class="fs-8 p-0 m-0">DEAMN</p>
+              <p class="fs-8 p-0 m-0">1,2 M views • 1 housr ago</p>
+            </div>
+          </div>
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/maxresdefault.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Nhạc Lofi 8x9x - Nhạc Xưa Chill Nhẹ Nhàng - Top Nhạc Trẻ Xưa
+                Hot TikTok ♫ Nhạc Chill Hot TikTok 2022</a
+              >
+              <p class="fs-8 p-0 m-0">Tiệm Nhạc Xưa</p>
+              <p class="fs-8 p-0 m-0">1,2 M views • 1 housr ago</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/video1.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Đen - Luôn yêu đời ft. Cheng (M/V)</a
+              >
+              <p class="fs-8 p-0 m-0">Đen Vâu Official</p>
+              <p class="fs-8 p-0 m-0">4,9 M views • 9 ngày trước</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/video2.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Cảm Phục Tinh Thần Vượt Khó, Chạy Đua Với Thời Gian Cứu Nạn
+                Nhân Của Các Chiến Sĩ Cứu Hộ VN | SKĐS</a
+              >
+              <p class="fs-8 p-0 m-0">Báo Sức khoẻ & Đời sống</p>
+              <p class="fs-8 p-0 m-0">164 N views • 1 ngày trước</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/4.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Ghé Vào Tai (UMIE x Freaky x Hổ) - Những Bản Nhạc Lofi Chill
+                Khó Quên - Nhạc Chill TikTok 2023</a
+              >
+              <p class="fs-8 p-0 m-0">Đậm Sound</p>
+              <p class="fs-8 p-0 m-0">100 N views • 5 ngày trước</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/maxresdefault.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Nhạc EDM Nhiều Cảm Xúc Cho Ngày Dài Mỏi Mệt ♫ Top 20 Bản Nhạc
+                EDM Gây Nghiện Hay Nhất 2023</a
+              >
+              <p class="fs-8 p-0 m-0">Cloud EDM</p>
+              <p class="fs-8 p-0 m-0">1,1 K views • 15 hours ago</p>
+            </div>
+          </div>
+          <!--  -->
+          <div class="list__video d-flex mb-2">
+            <div class="position-relative">
+              <img class="video__img" src="./assets/6.jpg" alt="" />
+              <p class="time_small">1:03:22</p>
+            </div>
+
+            <div class="vid__info">
+              <a class="subject fs-7" href="#"
+                >Top 15 Bản Nhạc EDM Nghe Hoài Không Chán | Nhạc Điện Tử Gây
+                Nghiện Hay Nhất | YING</a
+              >
+              <p class="fs-8 p-0 m-0">DEAMN</p>
+              <p class="fs-8 p-0 m-0">1,2 M views • 1 housr ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Js -->
+    <script src="/index.js"></script>
+  </body>
+</html>

@@ -105,7 +105,8 @@ p {
 	overflow-y: hidden;
 	left: 0;
 	top: 61px;
-	height: calc(100% - 61px);
+	height: calc(100% - 59px);
+	z-index: 999;
 }
 
 .small__sidebar {
@@ -188,7 +189,7 @@ p {
 	background-color: #dfdcdcbe;
 }
 
-.home__icon, .shorst__icon, .subscript__icon, .library__icon, .history__icon, .trending__icon, .gaming__icon, .news__icon, .cup__icon, .add__icon, .music__icon, .kid__icon, .tv__icon, .feedback__icon, .help__icon, .report__icon, .setting__icon, .clock__icon, .addList__icon, .home__icon, .liblary__icon {
+.home__icon, .shorst__icon, .subscript__icon, .library__icon, .history__icon, .trending__icon, .gaming__icon, .news__icon, .cup__icon, .add__icon, .music__icon, .kid__icon, .tv__icon, .feedback__icon, .help__icon, .report__icon, .setting__icon, .clock__icon, .addList__icon, .home__icon, .liblary__icon, .like__icon, .dislike__icon, .share__icon, .save__icon, .more__icon {
 	width: 1.2rem;
 	height: 1.2rem;
 	margin-right: 1.2rem;
@@ -201,6 +202,10 @@ p {
 .menu__link:hover {
 	background-color: #dfdcdcbe;
 
+}
+
+.w-45 {
+	width: 45px;
 }
 
 .w-14 {
@@ -235,7 +240,7 @@ p {
 	align-items: center;
 	left: 260px !important;
 	right: 0 !important;
-	top: 60px !important;
+	margin-top: 60px !important;
 	height: calc(100% - 61px);
 	background-color: #fff;
 	z-index: 99;
@@ -246,6 +251,12 @@ p {
 	border-radius: 10px !important;
 	z-index: 3 !important;
 	width: 82% !important;
+}
+
+.type__text {
+	min-width: fit-content;
+	max-width: fit-content;
+	-webkit-line-clamp: 1;
 }
 
 .large__containers #type {
@@ -315,8 +326,8 @@ p {
 
 .author__img {
 	clip-path: circle(20px at 50% 50%);
-	width: 50px;
-	height: 50px;
+	height: 40px;
+	object-fit: contain;
 }
 
 .subject {
@@ -324,7 +335,6 @@ p {
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-line-clamp: 2;
-	/* Số dòng cần cố định */
 	-webkit-box-orient: vertical;
 	font-weight: 500;
 }
@@ -491,4 +501,171 @@ p {
 
 .slick-next {
 	right: 0;
+}
+
+.play__container {
+	margin-left: 90px !important;
+	padding-top: 5%;
+}
+
+.list__video, .subscribe__btn {
+	cursor: pointer;
+}
+
+.subscribe__btn:hover {
+	background-color: #232323e7 !important;
+}
+
+iframe {
+	width: 100%;
+	height: 70vh;
+	object-fit: contain;
+}
+
+.video__img {
+	width: 160px;
+	object-fit: contain;
+	margin: 0px 5px 0px 10px;
+	border-radius: 10px;
+}
+
+.subscribe__btn {
+	font-weight: 500;
+}
+
+.line {
+	content: "";
+	background-color: #ccc;
+}
+
+.content__right {
+	cursor: pointer;
+}
+
+.like, .share__btn, .save__btn {
+	background-color: #f2f2f2;
+	border-radius: 30px;
+}
+
+.like__btn {
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+
+.dislike__btn {
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+.like__btn:hover, .dislike__btn:hover, .share__btn:hover, .save__btn:hover, .more__btn:hover {
+	background-color: #dfdfdf;
+}
+
+.more__btn {
+	background-color: #f2f2f2;
+	border-radius: 50%;
+}
+
+.name, .show__more, .sort, .rep {
+	cursor: pointer;
+}
+
+.name {
+	font-size: 16px;
+}
+
+.review {
+	background-color: #f2f2f2;
+	border-radius: 12px;
+}
+
+.comment {
+	font-weight: 500;
+}
+
+.sort__icon {
+	width: 1.8rem !important;
+	height: 1.8rem !important;
+}
+
+.text {
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	cursor: text;
+}
+
+.user {
+	width: 2.1rem !important;
+	cursor: default !important;
+	object-fit: contain !important;
+	top: 0;
+}
+
+.like__icon:hover, .dislike__icon:hover, .rep:hover {
+	background-color: #f2f2f2;
+	border-radius: 50%;
+}
+
+.sidebar__hide {
+	/* display: none; */
+	background-color: #fff;
+	/* left: -250px; */
+	transition: left 0.3s ease-in-out;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+	display: none;
+}
+
+.show-overlay {
+	display: block;
+}
+
+.time_small {
+	font-size: 12px;
+	background-color: #21212197;
+	height: 17px;
+	padding: 1px;
+	border-radius: 5px;
+	position: absolute;
+	right: 10%;
+	top: 70%;
+	color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+	.name, .sidebar, .title, .review, .text-black, .comment, .text {
+		font-size: 10px !important;
+	}
+
+	.subscriber {
+		font-size: 8px !important;
+	}
+
+	.subscribe__btn {
+		font-size: 8px !important;
+		margin-left: 0px !important;
+	}
+
+	.content__right>* {
+		font-size: 10px !important;
+		padding: 0 !important;
+		margin: 0 !important;
+	}
+
+	.sidebar {
+		width: 180px;
+	}
+
+	.time__small {
+		right: 68% !important;
+		position: absolute;
+	}
 }
